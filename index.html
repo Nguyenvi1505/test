@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mood Music +</title>
+    <meta name="viewport"
+        content="user-scalable=no, initial-scale=1, maximum-scale=0.5, minimum-scale=0.5, width=device-width" />
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.3.1/css/all.css'>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="https://i.imgur.com/ixd75H4.png" type="image/x-icon">
+    <style>
+body {
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+</style>
+
+
+<script type="text/javascript">
+//<=!=[=C=D=A=T=A=[
+document.onkeypress = function(event) {
+event = (event || window.event);
+if (event.keyCode === 123) {
+//alert('No F-12');
+return false;
+}
+};
+document.onmousedown = function(event) {
+event = (event || window.event);
+if (event.keyCode === 123) {
+//alert('No F-keys');
+return false;
+}
+};
+document.onkeydown = function(event) {
+event = (event || window.event);
+if (event.keyCode === 123) {
+//alert('No F-keys');
+return false;
+}
+};
+
+function contentprotector() {
+return false;
+}
+function mousehandler(e) {
+var myevent = (isNS) ? e : event;
+var eventbutton = (isNS) ? myevent.which : myevent.button;
+if ((eventbutton === 2) || (eventbutton === 3))
+return false;
+}
+document.oncontextmenu = contentprotector;
+document.onmouseup = contentprotector;
+var isCtrl = false;
+window.onkeyup = function(e)
+{
+if (e.which === 17)
+isCtrl = false;
+}
+
+window.onkeydown = function(e)
+{
+if (e.which === 17)
+isCtrl = true;
+if (((e.which === 85) || (e.which === 65) || (e.which === 88) || (e.which === 67) || (e.which === 86) || (e.which === 83)) && isCtrl === true)
+{
+return false;
+}
+}
+isCtrl = false;
+document.ondragstart = contentprotector;
+//]=]=> </script>
+</head>
+
+<body>
+    <!-- Messenger Plugin chat Code -->
+    <div id="fb-root"></div>
+      <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            xfbml            : true,
+            version          : 'v10.0'
+          });
+        };
+
+        (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+      </script>
+
+      <!-- Your Plugin chat code -->
+      <div class="fb-customerchat"
+        attribution="setup_tool"
+        page_id="100127038372369">
+      </div>
+    <!-- partial:index.partial.html -->
+    <!-- Tracks used in this music/audio player application are free to use. I downloaded them from Soundcloud and NCS websites. I am not the owner of these tracks. -->
+
+    <div id="app-cover">
+        <div id="bg-artwork"></div>
+        <div id="bg-layer"></div>
+        <div id="player">
+            <div id="player-track">
+                <div id="album-name"></div>
+                <div id="track-name"></div>
+                <div id="track-time">
+                    <div id="current-time"></div>
+                    <div id="track-length"></div>
+                </div>
+                <div id="s-area">
+                    <div id="ins-time"></div>
+                    <div id="s-hover"></div>
+                    <div id="seek-bar"></div>
+                </div>
+            </div>
+            <div id="player-content">
+                <div id="album-art">
+                    <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_1.jpg"
+                        class="active" id="_1">
+                    <div id="buffer-box">Buffering ...</div>
+                </div>
+                <div id="player-controls">
+                    <div class="control">
+                        <div class="button" id="play-previous">
+                            <i class="fas fa-backward"></i>
+                        </div>
+                    </div>
+                    <div class="control">
+                        <div class="button" id="play-pause-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="control">
+                        <div class="button" id="play-next">
+                            <i class="fas fa-forward"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- partial -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
